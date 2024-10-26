@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dollar Calculation - Tailwind CSS Design</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="max-w-lg mx-auto mt-12">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-2xl font-bold text-center mb-6">Dollar Calculation</h3>
+
+            <div class="flex justify-center mb-6 space-x-2">
+                <button onclick="calculate('bkash')" id="bkashButton"
+                    class="bg-[#D81B60] text-white px-4 py-2 rounded hover:bg-blue-600">bKash</button>
+                <button onclick="calculate('nagad')"
+                    class="bg-[#F7941E] text-white px-4 py-2 rounded hover:bg-yellow-600">Nagad</button>
+                <button onclick="calculate('bank')"
+                    class="bg-[#007BFF] text-white px-4 py-2 rounded hover:bg-green-600">Bank</button>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', (event) => {
+                    document.getElementById('bkashButton').click();
+                });
+            </script>
+
+            <div class="mb-4">
+                <label for="bkashAmount" class="block text-sm font-medium text-gray-700">Amount:</label>
+                <input type="number" id="bkashAmount" class="mt-1 block w-full p-2 border rounded"
+                    placeholder="Enter amount" value="1000">
+                <p id="amountError" class="text-red-500 text-sm mt-1"></p>
+            </div>
+
+            <div class="mb-4">
+                <label for="dollarRate" class="block text-sm font-medium text-gray-700">Dollar Rate:</label>
+                <input type="number" id="dollarRate" class="mt-1 block w-full p-2 border rounded"
+                    placeholder="Enter dollar rate" value="125">
+                <p id="dollarRateError" class="text-red-500 text-sm mt-1"></p>
+            </div>
+
+            <div class="mb-4">
+                <label for="salesPrice" class="block text-sm font-medium text-gray-700">Sales Price:</label>
+                <input type="number" id="salesPrice" class="mt-1 block w-full p-2 border rounded"
+                    placeholder="Enter sales price" value="131">
+                <p id="salesPriceError" class="text-red-500 text-sm mt-1"></p>
+            </div>
+
+            <div id="results" class="mt-6 grid grid-cols-2 gap-4">
+                <div class="bg-[#2A9D8F] p-4 rounded-lg shadow text-center">
+                    <p id="dollarAmount" class="font-semibold text-white"></p>
+                    <p class="font-semibold text-white">Dollar Amount</p>
+                </div>
+                <div class="bg-[#FF4D6D] p-4 rounded-lg shadow text-center">
+                    <p id="transferMoney" class="font-semibold text-white"></p>
+                    <p class="font-semibold text-white"">Transfer Money</p>
+                </div>
+                <div class=" bg-[#2F6690] p-4 rounded-lg shadow text-center">
+                    <p id="buyingRate" class="font-semibold text-white"></p>
+                    <p class="font-semibold text-white"">Buying Rate</p>
+                </div>
+                <div class=" bg-[#00A5CF] p-4 rounded-lg shadow text-center">
+                    <p id="resultSalesPrice" class="font-semibold text-white"></p>
+                    <p class="font-semibold text-white"">Sales Price</p>
+                </div>
+                <div class=" bg-[#2C0735] p-4 rounded-lg shadow text-center">
+                    <p id="profitPerDollar" class="font-semibold text-white"></p>
+                    <p class="font-semibold text-white"">Profit Per Dollar</p>
+                </div>
+                <div class=" bg-[#040404] p-4 rounded-lg shadow text-center">
+                    <p id="totalProfit" class="font-semibold text-white"></p>
+                    <p class="font-semibold text-white"">Total Profit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src=" script.js">
+    </script>
+</body>
+
+</html>
